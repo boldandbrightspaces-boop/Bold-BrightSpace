@@ -1002,20 +1002,6 @@ export default function App() {
                       {/* Gradient overlay for contrast and luxury mood */}
                       <div className="absolute inset-0 bg-gradient-to-t from-[#080A0E] via-transparent to-transparent opacity-85" />
 
-                      {/* Bottom Project Badge */}
-                      <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#080A0E]/90 backdrop-blur-md border border-[#242732]">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#F5A623] block">
-                              Design reference
-                            </span>
-                            <span className="text-sm font-medium text-white block mt-0.5 font-serif">
-                              Residential interior
-                            </span>
-                          </div>
-                          <span className="text-[11px] text-[#B0A090] font-mono border border-[#242732] px-2.5 py-1 rounded bg-[#12141B]">Reference</span>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -1073,9 +1059,6 @@ export default function App() {
                       decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#080A0E]/75 via-transparent to-transparent" />
-                    <span className="absolute bottom-4 left-5 font-mono text-xs tracking-[0.18em] text-[#FFCA6B]">
-                      {group.number}
-                    </span>
                   </div>
                   <div className="p-5 sm:p-6">
                     <h3 className="mb-4 font-serif text-xl font-semibold text-white sm:text-2xl">
@@ -1209,7 +1192,6 @@ export default function App() {
                 <div className="about-editorial__image about-editorial__image--detail">
                   <img src={ceilingServicesPhotoUrl} alt="Interior reference showing layered ceiling and lighting details" loading="lazy" decoding="async" />
                 </div>
-                <span aria-hidden="true" className="about-editorial__index">B<span>&</span>B</span>
               </div>
               <div className="about-editorial__copy text-reveal-group">
                 <p className="text-reveal-item text-reveal-item--heading about-editorial__lead">Every space has its own purpose, character, and possibilities.</p>

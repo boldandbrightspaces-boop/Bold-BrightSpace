@@ -222,19 +222,6 @@ body {
   background: #0B0D12;
 }
 
-.about-editorial__index {
-  position: absolute;
-  top: 1rem;
-  right: 0;
-  color: rgb(255 255 255 / 75%);
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  letter-spacing: 0.16em;
-  writing-mode: vertical-rl;
-}
-
-.about-editorial__index span { color: var(--color-gold); }
-
 .about-editorial__copy {
   display: grid;
   gap: 1rem;
