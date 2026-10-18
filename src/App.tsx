@@ -1336,14 +1336,19 @@ export default function App() {
                 </div>
                 <div className="contact-map-grid">
                   <article className="contact-map-panel">
-                    <div className="contact-map-panel__heading"><div><h3>Yedehalli</h3><p>GYP Decor interiors (POP Shop)</p></div><span>01</span></div>
-                    <iframe title="Google Maps preview for GYP Decor interiors (POP Shop), Yedehalli" src="https://www.google.com/maps?q=GYP+Decor+interiors+%28POP+Shop%29%2C+Yedehalli%2C+Karnataka&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
-                    <a href="https://maps.app.goo.gl/xk869cryHqBvfVpm7" target="_blank" rel="noreferrer" className="contact-map-panel__link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">Open listing in Google Maps <ExternalLink aria-hidden="true" /></a>
+                    <div className="contact-map-panel__heading"><div><h3>Bengaluru</h3><p>Bold and Bright Space</p></div><span>01</span></div>
+                    <iframe title="Google Maps preview for Bold and Bright Space, Bengaluru" src="https://www.google.com/maps?q=Bold+and+Bright+Space%2C+XGXG%2B3PW%2C+Kasturi+Layout%2C+Kaveri+Nagar%2C+Kamala+Nagar%2C+Bengaluru%2C+Karnataka+560079&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+                    <a href="https://maps.app.goo.gl/XSrvAafxPjYENQ447" target="_blank" rel="noreferrer" className="contact-map-panel__link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">Open listing in Google Maps <ExternalLink aria-hidden="true" /></a>
                   </article>
                   <article className="contact-map-panel">
                     <div className="contact-map-panel__heading"><div><h3>Bengaluru</h3><p>Define Home Interiors</p></div><span>02</span></div>
                     <iframe title="Google Maps preview for Define Home Interiors, Bengaluru" src="https://www.google.com/maps?q=Define+Home+Interiors%2C+Bengaluru%2C+Karnataka&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
                     <a href="https://maps.app.goo.gl/LtvJaE7ztKMvtjS88?g_st=iw" target="_blank" rel="noreferrer" className="contact-map-panel__link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">Open listing in Google Maps <ExternalLink aria-hidden="true" /></a>
+                  </article>
+                  <article className="contact-map-panel">
+                    <div className="contact-map-panel__heading"><div><h3>Yedehalli</h3><p>GYP Decor interiors (POP Shop)</p></div><span>03</span></div>
+                    <iframe title="Google Maps preview for GYP Decor interiors (POP Shop), Yedehalli" src="https://www.google.com/maps?q=GYP+Decor+interiors+%28POP+Shop%29%2C+Yedehalli%2C+Karnataka&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+                    <a href="https://maps.app.goo.gl/xk869cryHqBvfVpm7" target="_blank" rel="noreferrer" className="contact-map-panel__link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">Open listing in Google Maps <ExternalLink aria-hidden="true" /></a>
                   </article>
                 </div>
               </div>
@@ -1364,6 +1369,15 @@ export default function App() {
                   <span className="contact-call-link__label">Call or WhatsApp</span>
                   <span className="contact-call-link__number">+91 87228 90061</span>
                   <ArrowRight aria-hidden="true" className="h-4 w-4 text-[#F5A623]" />
+                </a>
+                <a href="mailto:boldandbrightspaces@gmail.com" className="text-reveal-item text-reveal-item--supporting contact-call-link mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">
+                  <span className="contact-call-link__label">Email</span>
+                  <span className="contact-call-link__number">boldandbrightspaces@gmail.com</span>
+                  <ArrowRight aria-hidden="true" className="h-4 w-4 text-[#F5A623]" />
+                </a>
+                <a href="https://maps.app.goo.gl/XSrvAafxPjYENQ447" target="_blank" rel="noreferrer" className="text-reveal-item text-reveal-item--supporting contact-call-link mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">
+                  <span className="contact-call-link__number">View Our Location on Google Maps</span>
+                  <ExternalLink aria-hidden="true" className="h-4 w-4 text-[#F5A623]" />
                 </a>
                 <a href="https://wa.me/918722890061" target="_blank" rel="noreferrer" className="text-reveal-item text-reveal-item--action mt-4 inline-flex min-h-11 items-center gap-2 rounded-full border border-[#F5A623]/45 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FFCA6B] transition-colors hover:bg-[#F5A623]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">Open WhatsApp <ExternalLink aria-hidden="true" className="h-4 w-4" /></a>
 
@@ -1477,8 +1491,10 @@ export default function App() {
           <div className="site-footer__connect">
             <p className="site-footer__eyebrow">Connect</p>
             <a href="tel:+918722890061" className="site-footer__phone focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">+91 87228 90061</a>
+            <a href="mailto:boldandbrightspaces@gmail.com" className="site-footer__external focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">boldandbrightspaces@gmail.com</a>
             <a href="https://maps.app.goo.gl/xk869cryHqBvfVpm7" target="_blank" rel="noreferrer" className="site-footer__external focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">Yedehalli · Google Maps <ExternalLink aria-hidden="true" /></a>
             <a href="https://maps.app.goo.gl/LtvJaE7ztKMvtjS88?g_st=iw" target="_blank" rel="noreferrer" className="site-footer__external focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">Bengaluru · Google Maps <ExternalLink aria-hidden="true" /></a>
+            <a href="https://maps.app.goo.gl/XSrvAafxPjYENQ447" target="_blank" rel="noreferrer" className="site-footer__external focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">Bold &amp; Bright Space Location <ExternalLink aria-hidden="true" /></a>
             <a href="https://www.instagram.com/bold_bright_space?stkn=MXB2NG9tcnVobjBrOQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="site-footer__external focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">Instagram <ExternalLink aria-hidden="true" /></a>
           </div>
         </div>
