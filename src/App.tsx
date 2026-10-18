@@ -968,9 +968,9 @@ export default function App() {
                       >
                         <div className="flex items-center gap-2.5 mb-1.5">
                           <IconComponent className="w-4 h-4 text-[#F5A623] transition-transform duration-300 group-hover:scale-110" />
-                          <h3 className="text-xs font-semibold uppercase tracking-wider text-white">
+                          <h2 className="text-xs font-semibold uppercase tracking-wider text-white">
                             {pillar.title}
-                          </h3>
+                          </h2>
                         </div>
                         <p className="text-[12px] text-[#B0A090] leading-snug">
                           {pillar.desc}
@@ -993,8 +993,11 @@ export default function App() {
                       <img
                         src={heroPhotoUrl}
                         alt="Stock reference image of a contemporary residential living room"
+                        width={1600}
+                        height={1200}
                         className="w-full h-full object-cover object-[center_55%] transition-transform duration-700 ease-out group-hover:scale-105"
                         loading="eager"
+                        fetchPriority="high"
                       />
                       {/* Gradient overlay for contrast and luxury mood */}
                       <div className="absolute inset-0 bg-gradient-to-t from-[#080A0E] via-transparent to-transparent opacity-85" />
