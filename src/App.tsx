@@ -22,6 +22,7 @@ import ceilingServicesPhotoUrl from './assets/stock-services-ceilings.jpg'
 import fabricationServicesPhotoUrl from './assets/stock-services-interior.jpg'
 import testimonialPhotoUrl from '../images&videos/854ee4c9-4803-40b6-9690-6f7acf05e852.JPG'
 import { galleryReferenceImages, galleryServiceCategories, type GalleryServiceCategory } from './data/galleryReferences'
+import projectPhotoAlt from './data/projectPhotoAlt'
 
 const projectAssetModules = import.meta.glob<string>('../images&videos/*.{JPG,jpg}', {
   eager: true,
@@ -72,9 +73,7 @@ const projectAssets = Object.entries(projectAssetModules)
     name: path.split(/[\\/]/).pop() ?? 'Project media',
     kind: 'project' as const,
     category: ceilingPhotoNames.has(path.split(/[\\/]/).pop() ?? '') ? 'False Ceilings' as const : 'Interior Design' as const,
-    alt: ceilingPhotoNames.has(path.split(/[\\/]/).pop() ?? '')
-      ? 'Completed false ceiling and lighting in a Bold & Bright Space project'
-      : 'Completed interior details in a Bold & Bright Space project',
+    alt: projectPhotoAlt[path.split(/[\\/]/).pop() ?? ''] ?? 'Completed interior project photo',
   }))
 const currentYear = new Date().getFullYear()
 const galleryAssets = [
@@ -659,7 +658,7 @@ export default function App() {
       number: '01',
       title: 'Interior spaces',
       image: interiorServicesPhotoUrl,
-      imageAlt: 'Stock interior reference showing a furnished contemporary living space',
+      imageAlt: 'Open-plan living room with a gray sofa, wood accent wall, and kitchen',
       services: [
         { name: 'Interior Design', description: 'Thoughtful layouts and coordinated design choices tailored to the space and its intended use.' },
         { name: 'Furnished Homes', description: 'Coordinated interior solutions that help make living spaces functional and complete.' },
@@ -670,7 +669,7 @@ export default function App() {
       number: '02',
       title: 'Built-in living',
       image: builtinsServicesPhotoUrl,
-      imageAlt: 'Stock interior reference showing neutral furnishings and natural wood finishes',
+      imageAlt: 'Neutral living room with a cream sofa, layered wall decor, and a wood coffee table',
       services: [
         { name: 'Wardrobes', description: 'Storage solutions planned around available space, accessibility, and everyday needs.' },
         { name: 'TV Walls', description: 'Feature walls designed to integrate the television, storage, and surrounding interior elements.' },
@@ -681,7 +680,7 @@ export default function App() {
       number: '03',
       title: 'Ceilings & finishes',
       image: ceilingServicesPhotoUrl,
-      imageAlt: 'Stock interior reference showing a bright living space and ceiling plane',
+      imageAlt: 'Bright living room with a staircase, tall windows, and blue seating',
       services: [
         { name: 'False Ceilings', description: 'Ceiling designs that bring structure, lighting integration, and a finished look to interiors.' },
         { name: 'Gypsum Work', description: 'Gypsum installations and detailing for clean, practical interior finishes.' },
@@ -692,7 +691,7 @@ export default function App() {
       number: '04',
       title: 'Architectural fabrication',
       image: fabricationServicesPhotoUrl,
-      imageAlt: 'Stock interior reference showing natural materials in a contemporary living area',
+      imageAlt: 'Open-plan living room with a gray sofa and wood accent wall',
       services: [
         { name: 'Aluminium Cladding', description: 'Aluminium cladding solutions for suitable architectural and interior applications.' },
         { name: 'Stainless Steel (SS) Works', description: 'Stainless steel components and detailing for relevant project requirements.' },
@@ -992,7 +991,7 @@ export default function App() {
                     <div className="aspect-[4/3] w-full overflow-hidden bg-[#080A0E] relative">
                       <img
                         src={heroPhotoUrl}
-                        alt="Stock reference image of a contemporary residential living room"
+                        alt="Bright living room with sofas, a coffee table, indoor plants, and large windows"
                         width={1600}
                         height={1200}
                         className="w-full h-full object-cover object-[center_55%] transition-transform duration-700 ease-out group-hover:scale-105"
@@ -1153,7 +1152,7 @@ export default function App() {
                             >
                               <img
                                 src={asset.url}
-                                alt=""
+                                alt={asset.alt}
                                 loading="lazy"
                                 decoding="async"
                                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
@@ -1187,10 +1186,10 @@ export default function App() {
               </div>
               <div className="about-editorial__visual section-reveal">
                 <div className="about-editorial__image about-editorial__image--main">
-                  <img src={builtinsServicesPhotoUrl} alt="Interior reference with considered furniture, textures, and warm finishes" loading="lazy" decoding="async" />
+                  <img src={builtinsServicesPhotoUrl} alt="Neutral living room with a cream sofa, layered wall decor, and a wood coffee table" loading="lazy" decoding="async" />
                 </div>
                 <div className="about-editorial__image about-editorial__image--detail">
-                  <img src={ceilingServicesPhotoUrl} alt="Interior reference showing layered ceiling and lighting details" loading="lazy" decoding="async" />
+                  <img src={ceilingServicesPhotoUrl} alt="Bright living room with a staircase, tall windows, and blue seating" loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className="about-editorial__copy text-reveal-group">
@@ -1214,7 +1213,7 @@ export default function App() {
                   <p className="text-reveal-item text-reveal-item--body mt-5 max-w-md text-sm leading-relaxed text-[#B0A090] sm:text-base">A thoughtful interior brings together how a space looks, how it works, and how its details come together.</p>
                 </div>
                 <div className="image-reveal why-editorial__image mt-8 overflow-hidden rounded-sm border border-[#242732]">
-                  <img src={fabricationServicesPhotoUrl} alt="Interior reference with coordinated finishes and functional living space" loading="lazy" decoding="async" />
+                  <img src={fabricationServicesPhotoUrl} alt="Open-plan living room with a gray sofa and wood accent wall" loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className="why-editorial__list" aria-label="Our approach">

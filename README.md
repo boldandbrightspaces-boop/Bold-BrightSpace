@@ -2,7 +2,7 @@
 
 ## Production SEO domain
 
-After the custom domain is connected and confirmed, set `VITE_SITE_URL` in the Vercel production environment to its HTTPS root URL. The production build then adds matching canonical and `og:url` tags, generates a one-URL `dist/sitemap.xml`, and adds its absolute URL to `dist/robots.txt`. Until that value is configured, the build leaves canonical metadata unset and serves `robots.txt` with crawling allowed; it does not publish a placeholder sitemap. Invalid URLs fail the build after Vite clears the output directory, preventing stale generated SEO files from being mistaken for a successful build.
+The confirmed production domain is `https://www.boldandbrightspace.in/`. Set `VITE_SITE_URL` in Vercel Production to this HTTPS root URL. A configured production build adds matching canonical and `og:url` tags, absolute social-preview image URLs, the Organization schema's website and full logo URLs, a one-URL `dist/sitemap.xml`, and its absolute URL in `dist/robots.txt`. If the value is unset, canonical, `og:url`, social-image URLs, Organization website/logo properties, and the generated sitemap are omitted; the site remains crawlable. Invalid URLs fail the build after Vite clears the output directory, preventing stale generated SEO files from being mistaken for a successful build.
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 

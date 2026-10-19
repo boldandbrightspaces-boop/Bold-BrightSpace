@@ -57,11 +57,27 @@ function seoPlugin(siteUrl: string | undefined, isBuild: boolean, configurationE
       handler(html) {
         if (!siteUrl) return html
 
+        const organizationSchema = /(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/
+        html = html.replace(organizationSchema, (_match, openTag: string, source: string, closeTag: string) => {
+          const schema = JSON.parse(source) as Record<string, unknown>
+          schema.url = siteUrl
+          schema.logo = new URL('bbs-logo.png', siteUrl).href
+          return `${openTag}\n      ${JSON.stringify(schema, null, 2)}\n    ${closeTag}`
+        })
+        const socialImageUrl = new URL('og-image.png', siteUrl).href
+
         return {
           html,
           tags: [
             { tag: 'link', attrs: { rel: 'canonical', href: siteUrl }, injectTo: 'head' },
             { tag: 'meta', attrs: { property: 'og:url', content: siteUrl }, injectTo: 'head' },
+            { tag: 'meta', attrs: { property: 'og:image', content: socialImageUrl }, injectTo: 'head' },
+            { tag: 'meta', attrs: { property: 'og:image:type', content: 'image/png' }, injectTo: 'head' },
+            { tag: 'meta', attrs: { property: 'og:image:alt', content: 'Bold & Bright Space logo alongside a completed interior project photograph' }, injectTo: 'head' },
+            { tag: 'meta', attrs: { property: 'og:image:width', content: '1200' }, injectTo: 'head' },
+            { tag: 'meta', attrs: { property: 'og:image:height', content: '630' }, injectTo: 'head' },
+            { tag: 'meta', attrs: { name: 'twitter:image', content: socialImageUrl }, injectTo: 'head' },
+            { tag: 'meta', attrs: { name: 'twitter:image:alt', content: 'Bold & Bright Space logo alongside a completed interior project photograph' }, injectTo: 'head' },
           ],
         }
       },
